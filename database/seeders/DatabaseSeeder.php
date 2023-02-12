@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,9 +19,8 @@ class DatabaseSeeder extends Seeder
          * 'u' or 'r' (uncommon or rare) would be options that require manual input.
          *  */ 
 
-        \App\Models\Ancestry::factory()
-            ->count(2)
-            ->sequence(
+         DB::table('ancestries')->insert(
+            [
                 [
                     'name' => 'Human',
                     'rarity' => 'c'
@@ -29,12 +29,11 @@ class DatabaseSeeder extends Seeder
                     'name' => 'Elf',
                     'rarity' => 'c'
                 ]
-            )
-            ->create();
-
-        \App\Models\CharacterClass::factory()
-            ->count(2)
-            ->sequence(
+            ]
+        );
+        
+        DB::table('character_classes')->insert(
+            [
                 [              
                     'name' => 'Fighter',
                     'rarity' => 'c'
@@ -43,12 +42,11 @@ class DatabaseSeeder extends Seeder
                     'name' => 'Cleric',
                     'rarity' => 'c'
                 ]
-            )
-            ->create();
+            ]
+        );
 
-        \App\Models\Background::factory()
-            ->count(2)
-            ->sequence(
+        DB::table('backgrounds')->insert(
+            [
                 [
                     'name' => 'Acolyte',
                     'rarity' => 'c'
@@ -57,7 +55,7 @@ class DatabaseSeeder extends Seeder
                     'name' => 'Criminal',
                     'rarity' => 'c'
                 ]
-            )
-            ->create();
+            ]
+        );
     }
 }
