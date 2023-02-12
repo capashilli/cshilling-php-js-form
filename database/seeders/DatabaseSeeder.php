@@ -14,16 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
         // ]);
-
         /**
-         * 
-         */
+         * Options with 'c' (common) rarity are always an option for characters, and can be shown in selectable lists.
+         * 'u' or 'r' (uncommon or rare) would be options that require manual input.
+         *  */ 
+
         \App\Models\Ancestry::factory()
             ->count(2)
             ->sequence(
