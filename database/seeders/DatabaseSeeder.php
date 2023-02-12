@@ -20,5 +20,50 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        /**
+         * 
+         */
+        \App\Models\Ancestry::factory()
+            ->count(2)
+            ->sequence(
+                [
+                    'name' => 'Human',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Elf',
+                    'rarity' => 'c'
+                ]
+            )
+            ->create();
+
+        \App\Models\CharacterClass::factory()
+            ->count(2)
+            ->sequence(
+                [              
+                    'name' => 'Fighter',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Cleric',
+                    'rarity' => 'c'
+                ]
+            )
+            ->create();
+
+        \App\Models\Background::factory()
+            ->count(2)
+            ->sequence(
+                [
+                    'name' => 'Acolyte',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Criminal',
+                    'rarity' => 'c'
+                ]
+            )
+            ->create();
     }
 }
