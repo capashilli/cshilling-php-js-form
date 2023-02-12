@@ -19,5 +19,7 @@ class Ancestry {
         'rarity'
     ];
 
+    protected $table = 'ancestries';
+
     // No need for hidden or cast fields.
 }

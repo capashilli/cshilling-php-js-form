@@ -7,7 +7,6 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 class Character {
-    use HasFactory;
 
     /**
      * The attributes that are mass assignable.

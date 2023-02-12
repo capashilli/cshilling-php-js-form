@@ -12,9 +12,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        // ]);
+    public function run() {
         /**
          * Options with 'c' (common) rarity are always an option for characters, and can be shown in selectable lists.
          * 'u' or 'r' (uncommon or rare) would be options that require manual input.

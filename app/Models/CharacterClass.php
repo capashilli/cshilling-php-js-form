@@ -19,5 +19,7 @@ class CharacterClass {
         'rarity'
     ];
 
+    protected $table = 'character_classes';
+
     // No need for hidden or cast fields.
 }
