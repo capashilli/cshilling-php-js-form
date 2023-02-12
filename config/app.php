@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Pathfinder Party'),
+    'name' => env('APP_NAME', 'Pen and Paper Party'),
 
     /*
     |--------------------------------------------------------------------------
