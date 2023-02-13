@@ -13,7 +13,7 @@ export class SelectOption {
     value;
 }
 
-export default function AddCharacterForm({}) {
+export default function AddCharacterForm({ ancestries, backgrounds, characterClasses }) {
 
     const { data, setData, post, processing, errors, reset } = useForm({
         name: '',
@@ -30,8 +30,10 @@ export default function AddCharacterForm({}) {
 
     // const [value, setValue] = useState<readonly SelectOption>
 
-    const submit = () => {
+    const submit = (e) => {
+        e.preventDefault();
 
+        post(route('party'));
     }
 
     const onHandleChange = (event) => {
@@ -68,7 +70,7 @@ export default function AddCharacterForm({}) {
                     <InputLabel forInput="ancestry" value="Ancestry" />
 
                     <Select
-                        options={transformOptions(usePage().props.ancestries)}
+                        options={transformOptions(ancestries)}
                         id="ancestry"
                         name="ancestry"
                         onChange={onSelectChange}
@@ -80,7 +82,7 @@ export default function AddCharacterForm({}) {
                     <InputLabel forInput="background" value="Background" />
 
                     <Select
-                        options={transformOptions(usePage().props.backgrounds)}
+                        options={transformOptions(backgrounds)}
                         id="background"
                         name="background"
                         onChange={onSelectChange}
@@ -92,7 +94,7 @@ export default function AddCharacterForm({}) {
                     <InputLabel forInput="character_class" value="Class" />
 
                     <Select
-                        options={transformOptions(usePage().props.characterClasses)}
+                        options={transformOptions(characterClasses)}
                         id="character_class"
                         name="character_class"
                         onChange={onSelectChange}
