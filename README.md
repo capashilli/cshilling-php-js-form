@@ -22,7 +22,7 @@ To run the project you need these pre-requisites:
 Once you have all that, run these commands in the project folder.  
 Install packages:
  - `npm install --save`
- - `php composer.phar install`  
+ - `php composer.phar install`  (depending on your setup, you may need to follow the command-line installation steps at https://getcomposer.org/download/)
 
 Create the database (answer 'yes' when asked to create the database, since it won't exist beforehand):
  - `php artisan migrate`
