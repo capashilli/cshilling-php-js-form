@@ -30,7 +30,23 @@ class DatabaseSeeder extends Seeder
                     'rarity' => 'c'
                 ],
                 [
-                    'name' => 'Automaton',
+                    'name' => 'Dwarf',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Gnome',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Goblin',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Halfling',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Skeleton',
                     'rarity' => 'r'
                 ]
             ]
@@ -44,6 +60,30 @@ class DatabaseSeeder extends Seeder
                 ],
                 [
                     'name' => 'Cleric',
+                    'rarity' => 'c'
+                ],
+                [              
+                    'name' => 'Barbarian',
+                    'rarity' => 'c'
+                ],
+                [              
+                    'name' => 'Bard',
+                    'rarity' => 'c'
+                ],
+                [              
+                    'name' => 'Druid',
+                    'rarity' => 'c'
+                ],
+                [              
+                    'name' => 'Rogue',
+                    'rarity' => 'c'
+                ],
+                [              
+                    'name' => 'Ranger',
+                    'rarity' => 'c'
+                ],
+                [              
+                    'name' => 'Wizard',
                     'rarity' => 'c'
                 ],
                 [
@@ -60,7 +100,39 @@ class DatabaseSeeder extends Seeder
                     'rarity' => 'c'
                 ],
                 [
+                    'name' => 'Acrobat',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Barkeep',
+                    'rarity' => 'c'
+                ],
+                [
                     'name' => 'Criminal',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Farmhand',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Guard',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Merchant',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Noble',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Prisoner',
+                    'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Warrior',
                     'rarity' => 'c'
                 ],
                 [
