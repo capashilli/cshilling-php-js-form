@@ -23,9 +23,11 @@ Once you have all that, run these commands in the project folder.
 Install packages:
  - `npm install --save`
  - `php composer.phar install`  
+
 Create the database (answer 'yes' when asked to create the database, since it won't exist beforehand):
  - `php artisan migrate`
  - `php artisan db:seed`  
+ 
 Run the project (both of these need to be running at the same time)
  - `npm run dev`
  - `php artisan serve`
