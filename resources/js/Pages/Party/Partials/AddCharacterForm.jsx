@@ -1,8 +1,7 @@
-// import { useRef, useState } from 'react';
 // import DangerButton from '@/Components/DangerButton';
+// import Modal from '@/Components/Modal';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
-// import Modal from '@/Components/Modal';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { useForm, usePage } from '@inertiajs/react';
@@ -48,65 +47,67 @@ export default function AddCharacterForm({ ancestries, backgrounds, characterCla
     }
 
     return(
-        <form onSubmit={submit}>
-                <div>
-                    <InputLabel forInput="name" value="Name" />
+        <form className="rounded shadow-md p-8 bg-white" onSubmit={submit}>
+            <h3>Tell us about your character!</h3>
 
-                    <TextInput
-                        id="name"
-                        name="name"
-                        value={data.name}
-                        className="mt-1 block w-full"
-                        autoComplete="name"
-                        isFocused={true}
-                        handleChange={onHandleChange}
-                        required
-                    />
+            <div className="mt-4">
+                <InputLabel forInput="name" value="My character's name is" />
 
-                    <InputError message={errors.name} className="mt-2" />
-                </div>
+                <TextInput
+                    id="name"
+                    name="name"
+                    value={data.name}
+                    className="mt-1 block w-full"
+                    autoComplete="name"
+                    isFocused={true}
+                    handleChange={onHandleChange}
+                    required
+                />
 
-                <div>
-                    <InputLabel forInput="ancestry" value="Ancestry" />
+                <InputError message={errors.name} className="mt-2" />
+            </div>
 
-                    <Select
-                        options={transformOptions(ancestries)}
-                        id="ancestry"
-                        name="ancestry"
-                        onChange={onSelectChange}
-                        required>
-                    </Select>
-                </div>
+            <div className="mt-4">
+                <InputLabel forInput="ancestry" value="My character is a" />
 
-                <div>
-                    <InputLabel forInput="background" value="Background" />
+                <Select
+                    options={transformOptions(ancestries)}
+                    id="ancestry"
+                    name="ancestry"
+                    onChange={onSelectChange}
+                    required>
+                </Select>
+            </div>
 
-                    <Select
-                        options={transformOptions(backgrounds)}
-                        id="background"
-                        name="background"
-                        onChange={onSelectChange}
-                        required>
-                    </Select>
-                </div>
+            <div className="mt-4">
+                <InputLabel forInput="background" value="Before my character became an adventurer, they were a" />
 
-                <div>
-                    <InputLabel forInput="character_class" value="Class" />
+                <Select
+                    options={transformOptions(backgrounds)}
+                    id="background"
+                    name="background"
+                    onChange={onSelectChange}
+                    required>
+                </Select>
+            </div>
 
-                    <Select
-                        options={transformOptions(characterClasses)}
-                        id="character_class"
-                        name="character_class"
-                        onChange={onSelectChange}
-                        required>
-                    </Select>
-                </div>
+            <div className="mt-4">
+                <InputLabel forInput="character_class" value="My character has developed their skills as a" />
 
-                <div className="flex items-center justify-end mt-4">
-                    <PrimaryButton className="ml-4" processing={processing}>
-                        Add Character
-                    </PrimaryButton>
-                </div>
-            </form>
+                <Select
+                    options={transformOptions(characterClasses)}
+                    id="character_class"
+                    name="character_class"
+                    onChange={onSelectChange}
+                    required>
+                </Select>
+            </div>
+
+            <div className="flex items-center justify-end mt-4">
+                <PrimaryButton className="ml-4" processing={processing}>
+                    Add Character
+                </PrimaryButton>
+            </div>
+        </form>
     )
 }

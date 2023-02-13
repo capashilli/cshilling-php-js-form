@@ -13,7 +13,11 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
             },
+            colors: {
+                'parchment': '#E0DCBF'
+            }
         },
     },
 
