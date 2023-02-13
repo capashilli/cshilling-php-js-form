@@ -1,25 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## About This Project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This application uses the following tech stack:
+ - The frontend is React.
+ - The backend is Laravel.
+ - These layers are connected by Inertia.
+ - The database is SQLite.
 
-## About Laravel
+The site itself is a simple form that creates a record representing a pen & paper rpg character.
+This was my first time using Inertia and SQLite, and I hadn't used React or Laravel for years.
+Learning how to assemble all the pieces was a fascinating experience.
+If you'd like more insight into my learning process, check out captainslog.txt.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Startup
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+To run the project you need these pre-requisites:
+ - PHP up to date, with the fileinfo and sqlite extensions enabled.
+ - Composer
+ - Node and npm up to date
+
+Once you have all that, run these commands in the project folder.
+Install packages:
+ - `npm install --save`
+ - `php composer.phar install`
+ Create the database (answer 'yes' when asked to create the database, since it won't exist beforehand):
+ - `php artisan migrate`
+ - `php artisan db:seed`
+ Run the project (both of these need to be running at the same time)
+ - `npm run dev`
+ - `php artisan serve`
+
+The site will be served to localhost:8000.
+
 
 ## License
 
