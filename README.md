@@ -19,7 +19,7 @@ To run the project you need these pre-requisites:
  - Composer
  - Node and npm up to date
 
-Once you have all that, run these commands in the project folder.
+Once you have all that, run these commands in the project folder.  
 Install packages:
  - `npm install --save`
  - `php composer.phar install`  
