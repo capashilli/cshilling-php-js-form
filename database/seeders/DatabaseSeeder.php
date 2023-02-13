@@ -28,6 +28,10 @@ class DatabaseSeeder extends Seeder
                 [
                     'name' => 'Elf',
                     'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Automaton',
+                    'rarity' => 'r'
                 ]
             ]
         );
@@ -41,6 +45,10 @@ class DatabaseSeeder extends Seeder
                 [
                     'name' => 'Cleric',
                     'rarity' => 'c'
+                ],
+                [
+                    'name' => 'Gunslinger',
+                    'rarity' => 'u'
                 ]
             ]
         );
@@ -54,7 +62,11 @@ class DatabaseSeeder extends Seeder
                 [
                     'name' => 'Criminal',
                     'rarity' => 'c'
-                ]
+                ],
+                [
+                    'name' => 'Haunted Vision',
+                    'rarity' => 'r'
+                ],
             ]
         );
     }
