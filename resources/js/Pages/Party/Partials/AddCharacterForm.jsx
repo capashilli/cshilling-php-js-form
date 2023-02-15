@@ -1,5 +1,3 @@
-// import DangerButton from '@/Components/DangerButton';
-// import Modal from '@/Components/Modal';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
@@ -24,7 +22,7 @@ export default function AddCharacterForm({ ancestries, backgrounds, characterCla
     const transformOptions = (options) => {
         return options.map(option => {
             return { value: option.name, label: option.name };
-        })
+        });
     }
 
     // const [value, setValue] = useState<readonly SelectOption>
@@ -37,12 +35,9 @@ export default function AddCharacterForm({ ancestries, backgrounds, characterCla
 
     const onHandleChange = (event) => {
         setData(event.target.name, event.target.value);
-        console.log(data);
     };
 
     const onSelectChange = (newValue, actionMeta) => {
-        console.log(newValue);
-        console.log(actionMeta);
         setData(actionMeta.name, newValue.value);
     }
 
@@ -77,6 +72,8 @@ export default function AddCharacterForm({ ancestries, backgrounds, characterCla
                     onChange={onSelectChange}
                     required>
                 </Select>
+
+                <InputError message={errors.ancestry} className="mt-2" />
             </div>
 
             <div className="mt-4">
@@ -89,6 +86,8 @@ export default function AddCharacterForm({ ancestries, backgrounds, characterCla
                     onChange={onSelectChange}
                     required>
                 </Select>
+
+                <InputError message={errors.background} className="mt-2" />
             </div>
 
             <div className="mt-4">
@@ -101,6 +100,8 @@ export default function AddCharacterForm({ ancestries, backgrounds, characterCla
                     onChange={onSelectChange}
                     required>
                 </Select>
+
+                <InputError message={errors.character_class} className="mt-2" />
             </div>
 
             <div className="flex items-center justify-end mt-4">
